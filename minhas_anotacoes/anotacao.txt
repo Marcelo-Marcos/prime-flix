@@ -1,0 +1,71 @@
+############################################################################################
+Primeiros passos:
+
+Ver novamente a aula
+
+############################################################################################
+Eliminar os seguintes arquivos no projeto REACT:
+
+logo.svg
+reportWebVitals.js
+setupTests.js
+index.css
+App.test.js
+App.css
+
+############################################################################################
+Configurações no edito de código:
+
+Em App.js eliminar os imports que forma deletado, e deixar a div com a estrutura a seguir
+alterando h1 para a opção mais adequada;
+
+function App() {
+  return (
+    <div>
+      <h1>Meu projeto Full Stack</h1>
+    </div>
+  );
+}
+
+export default App;
+
+No index.js devemos também eliminar os imports e vai ficar com a seguinte estrutura;
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+O index.html fica da seguinte forma, alterando o title e eliminando os comentários;
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Meu projeto Full Stack</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+
+############################################################################################
+Um componete pode ser criado em formato de função com a primeira letra maiuscula assim como 
+o arquivo do componente está salvo, ex: App.js, function App() {}. 
