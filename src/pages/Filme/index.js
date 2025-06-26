@@ -80,7 +80,9 @@ function Filme() {
       />
       <h3>Sinopse</h3>
       <span>{filme.overview}</span>
+      <strong>Data de lançamento: {filme.release_date}</strong>
       <strong>Avaliação: {filme.vote_average} /10</strong>
+      <strong>Contagem de votos: {filme.vote_count}</strong>
 
       <div className="area-buttons">
         <button onClick={salvarFilme}>Salvar</button>

@@ -1,8 +1,7 @@
 .filme-info {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  margin-top: 18px;
+  margin: 18px auto 18px auto;
   max-width: 800px;
   padding: 0 8px;
 }
@@ -25,6 +24,10 @@
 
 .filme-info span {
   margin: 8px;
+}
+
+.filme-info strong {
+  margin-bottom: 8px;
 }
 
 .area-buttons button {
