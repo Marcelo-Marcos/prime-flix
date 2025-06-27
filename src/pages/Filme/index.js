@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate, replace } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import api from "../../services/api";
 import "./filme-info.css";
 import { toast } from "react-toastify";
@@ -45,7 +45,7 @@ function Filme() {
       try {
         filmesSalvos = JSON.parse(minhaLista);
       } catch (erro) {
-        console.error("Erro ao fazer o parse da lista de filmes:", erro);
+        toast.error("Erro ao fazer o parse da lista de filmes:"+erro, {theme:"colored"});
         filmesSalvos = [];
       }
     }
@@ -55,13 +55,13 @@ function Filme() {
     );
 
     if (hasFilme) {
-      toast.warn("Esse filme já está na lista!");
+      toast.warn("Esse filme já está na lista!", {theme:"colored"});
       return;
     }
 
     filmesSalvos.push(filme);
     localStorage.setItem("@primeflix", JSON.stringify(filmesSalvos));
-    toast.success("Filme salvo com sucesso!");
+    toast.success("Filme salvo com sucesso!", {theme:"colored"});
   }
 
   if (loading) {
@@ -73,6 +73,7 @@ function Filme() {
   }
 
   return (
+    
     <div className="filme-info">
       <h1>{filme.title}</h1>
       <img

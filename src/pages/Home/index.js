@@ -100,17 +100,13 @@ function Home() {
         })}
       </div>
       <div className="container-botoes">
-        <button
-          className="container-botoes-imagem"
-          title="Anterior"
-          onClick={() => anterior(5)}
-        >
+      <button className="container-botoes-imagem" onClick={() => anterior(5)} disabled={count === 0}>
           <img src="/de-volta.png" alt="Voltar" />
         </button>
         <button
           className="container-botoes-imagem"
           title="Próximo"
-          onClick={() => proximo(5)}
+          onClick={() => proximo(5)} disabled={count === 15}
         >
           <img src="/proximo.png" alt="Voltar" />
         </button>
