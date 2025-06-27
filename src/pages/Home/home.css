@@ -45,3 +45,19 @@
   color: #fff;
   border-radius: 0 0 8px 8px;
 }
+
+.container-botoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-botoes-imagem {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.container-botoes-imagem img {
+  width: 75px;
+}
